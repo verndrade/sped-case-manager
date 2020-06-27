@@ -1,1 +1,10 @@
 Hello World!
+
+<ul>
+{% for i in assignment %}
+ <li>{{i.course}}</li>
+ <li>{{i.assignment}}</li>
+ <li>{{i.assign_date}}</li>
+ <li>{{i.due_date}}</li><br>
+{% endfor %}
+</ul>
