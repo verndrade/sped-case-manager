@@ -1,25 +1,17 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  {% block title %}
-  <title>SpEd CM</title>
-  {% endblock %}
+{% block content %}
 
-  <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    {% include 'case-manager/sidebar.html' %}
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <div id="page-content-wrapper">
+        <div class="content p-4 container-fluid text-center text-md-left h-100">
+            <div class="row h-100">
+                <p>This is where you include stuff</p>
+            </div>
+        </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      </div>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    {% include 'navbar.html'%}
-</body>
-</html>
+{% endblock %}
