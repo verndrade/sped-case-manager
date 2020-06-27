@@ -1,10 +1,14 @@
 Hello World!
 
+Students
 <ul>
-{% for i in assignment %}
- <li>{{i.course}}</li>
- <li>{{i.assignment}}</li>
- <li>{{i.assign_date}}</li>
- <li>{{i.due_date}}</li><br>
+{% for i in user.teacher.students.all %}
+ <li>{{i.user}}</li>
+ <ul>
+    {% for i in i.assignments.all %}
+     <li>{{i.due_date}}</li>
+     <li>{{i.course}}</li>
+    {% endfor %}
+ </ul>
 {% endfor %}
 </ul>
