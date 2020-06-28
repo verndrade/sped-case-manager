@@ -6,7 +6,11 @@
                 <img class="rounded-circle" width=110 height=110 style="object-fit: cover" src="https://images.pexels.com/photos/1288171/pexels-photo-1288171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
             </div>
             <div class="col-lg-6 my-auto">
-                <div class="row"><h1>Jane Doe</h1></div>
+                {% if i.user.get_fullname %}
+                    <div class="row"><h1>{{i.user.get_full_name}}</h1></div>
+                {% else %}
+                    <div class="row"><h1>Jane Doe</h1></div>
+                {% endif %}
                 <div class="row"><p>9th Grade<br><a href="#">John Smith</a></p></div>
             </div>
         </div>
