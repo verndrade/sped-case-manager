@@ -3,22 +3,26 @@
 
 {% block content %}
 {% for i in user.teacher.cases.all %}
-    {% include 'components/sidebar.html' %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4">{% include 'components/iep.html' %}</div>
-            <div class="col-lg-8">{% include 'components/assignments.html' %}</div>
+            <div class="col-lg-3 px-2 sidebar">
+                {% include 'components/sidebar.html' %}
+            </div>
+            <div class="col-lg-8 mt-4" width=100%>
+                <div class="row mb-2">
+                    <div class="col-lg-4">{% include 'components/iep.html' %}</div>
+                    <div class="col-lg-8">{% include 'components/assignments.html' %}</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-lg-8">{% include 'components/messages.html' %}</div>
+                    <div class="col-lg-4">{% include 'components/discipline.html' %}</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-lg-4">{% include 'components/contact.html' %}</div>
+                    <div class="col-lg-8">{% include 'components/notes.html' %}</div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8">{% include 'components/messages.html' %}</div>
-            <div class="col-lg-4">{% include 'components/discipline.html' %}</div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">{% include 'components/contact.html' %}</div>
-            <div class="col-lg-8">{% include 'components/notes.html' %}</div>
-        </div>
-    </div> <br> <br>
-    
+    </div>
 {% endfor %}
-
 {% endblock %}
