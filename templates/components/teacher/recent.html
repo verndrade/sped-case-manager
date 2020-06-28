@@ -6,7 +6,7 @@
     <div class="row students my-auto">
         {% for i in recent %}
             <div class="col-lg-3">
-                <a href="/casemanager/{{i.pk}}">{% include 'image.html' %}
+                <a href="/casemanager/{{i.pk}}">{% include 'components/image.html' %}
                       <h5 class="card-title">{{i.user.get_full_name}}</h5>
                 </a>
             </div>
