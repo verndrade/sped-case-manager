@@ -10,11 +10,10 @@ def index(request):
 
     template = 'unknown.html'
     context = {}
-    if request.user.teacher:
+    if hasattr(request.user,'teacher'):
         template = 'teacher.html'
         context['recent'] = request.user.teacher.students.all()[0:4]
-        print(context)
-    elif request.user.student:
+    elif hasattr(request.user,'student'):
         template = 'student.html'
     
     return render(request, template, context)
