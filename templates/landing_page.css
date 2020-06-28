@@ -1,3 +1,15 @@
+/* Header 2 */
+.header2 { 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+
+}
+
+
 /* LEFT SIDE*/ 
 /* Left Side */
 .left_side {
@@ -6,6 +18,7 @@
     height: 822px;
     left: 81px;
     top: 112px;
+    background-color:pink;
     }
     
     /* Recently Viewed Students */
@@ -16,26 +29,26 @@
     left: 81px;
     top: 112px;
     }
+        /* Recently Viewed Student Box */
+        .recently_viewed_student_box {
+            position: absolute;
+            width: 691px;
+            height: 34px;
+            background: #C4C4C4;
+        }
 
-    /* Recently Viewed Student Box */
-    .recently_viewed_student_box {
-        position: absolute;
-        width: 691px;
-        height: 34px;
-        left: 81px;
-        top: 112px;
-        
-        background: #C4C4C4;
-    }
-
-    /* Recently Viewed Students Text*/
-    .recently_viewed_student_text { 
+       /* Recently Viewed Students Text*/
+       .recently_viewed_student_text { 
         position: absolute;
         width: 289px;
         height: 31px;
         left: 106px;
         top: 119px;
     }
+
+
+
+ 
 
     /* Profile1 */
     .profile1{ 
@@ -310,6 +323,7 @@
     height: 822px;
     left: 1018px;
     top: 112px;
+    background-color: aqua;
 }
 
 /* Quick Access Tools Section*/
@@ -320,8 +334,8 @@ height: 125px;
 left: 1018px;
 top: 112px;
 }
-/* Header background_of_access */
-.header_background_access {
+/* Quick Access Box */
+.quick_access_box {
 position: absolute;
 width: 311px;
 height: 34px;
