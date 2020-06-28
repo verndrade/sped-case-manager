@@ -14,16 +14,7 @@
             height: 34px;
             background: #C4C4C4;
         }
-
-  
-    
-
-    .navbar {
-        background-color: #C4C4C4;
-        height: 50px;
-        width:100%;
-        display:block;
-    }
+        
          /* Recently Viewed Students Text*/
          #recently_viewed_student_text { 
         position: absolute;
@@ -36,21 +27,25 @@
 </style>
     <div class="container" >
         <div class="row" >
-            <nav class="navbar">
+            <nav class="title">
                 <span class="navbar-brand mb-0 h1">Recently Viewed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/roster">Full Roster</a></span>
             </nav>
         </div>
-        <br>
         <div class="row">
             {% for i in recent %}
             <div class="col-sm-3">
-                <div class="card" style="width: 9rem;">
+                <div style="width: 9rem;">
                     <img src="https://www.thispersondoesnotexist.com/image" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">{{i.user.get_full_name}}</h5>
+                      <h5 class="card-title">{% if i.user.get_full_name %}
+                        <p>{{i.user.get_full_name}}</p>
+                        {% else %}
+                        <p>Jane Doe</p>
+                        {% endif %}</h5>
                     </div>
                   </div>
             </div>
             {% endfor %}
         </div>
+        <div class="row bottom right small"><a href="#">View class roster</a></div>
     </div>

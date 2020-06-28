@@ -1,37 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class=container> 
+<div class="container-fluid"> 
     <div class="row">  
-        <div class="col-md-6">
-            {% include 'landing-page/recently_viewed.html' %}
-            <br>
-            <br>
-        </div>
-        <div class="col-6 col-md-4">
-            {% include 'landing-page/quick_access.html' %}
-        </div>
+        <div class="col-md-6">{% include 'landing-page/recently_viewed.html' %}</div>
+        <div class="col-6 col-md-4">{% include 'landing-page/quick_access.html' %}</div>
     </div>
     <div class="row">
-        <div class="col-md-6"> 
-            {% include 'landing-page/alerts.html' %}
-            <br>
-            <br>
-        </div>
-        <div class="col-6 col-md-4">
-            {% include 'landing-page/my_favorite.html' %}
-            <br>
-            <br>
-        </div>
+        <div class="col-md-6">{% include 'landing-page/alerts.html' %}</div>
+        <div class="col-6 col-md-4">{% include 'landing-page/my_favorite.html' %}</div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            {% include 'landing-page/widgets.html' %}
-        </div>
-        <div class="col-6 col-md-4">
-            {% include 'landing-page/upcoming_events.html' %}
-        </div>
+        <div class="col-md-6">{% include 'landing-page/widgets.html' %}</div>
+        <div class="col-6 col-md-4">{% include 'landing-page/upcoming_events.html' %}</div>
     </div>
-
 </div>
 {% endblock %}
