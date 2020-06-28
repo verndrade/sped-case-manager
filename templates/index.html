@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2 class="text-center">Hello {{user}}!</h2>
 
 {% if not user.is_anonymous %}
     {% if user.teacher %}
         {% include 'teacher.html' %}
     {% elif user.student %}
         {% include 'student.html' %}
-    {% elif user.student %}
-        {% include 'casemanager.html' %}       
-    {% endif %}
-{% else %}
-    Login in on /admin
+    {% else %}
+        <h2 class="text-center">You don't have a role contact your admin!</h2>
+{% endif %}
 {% endif %}
 {% endblock %}

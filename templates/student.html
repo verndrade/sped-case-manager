@@ -1,5 +1,2 @@
 Your Assignments:
-{% for i in user.student.assignments.all %}
-    <li>{{i.due_date}}</li>
-    <li>{{i.course}}</li>
-{% endfor %}
+{% include 'components/assignments.html' %}

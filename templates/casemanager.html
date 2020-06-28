@@ -1,17 +1,24 @@
-{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 
-    {% include 'case-manager/sidebar.html' %}
-
-    <div id="page-content-wrapper">
-        <div class="content p-4 container-fluid text-center text-md-left h-100">
-            <div class="row h-100">
-                <p>This is where you include stuff</p>
-            </div>
+{% for i in user.casemanager.students.all %}
+    {% include 'components/sidebar.html' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">{% include 'components/iep.html' %}</div>
+            <div class="col-lg-8"></div>
         </div>
-
-      </div>
+        <div class="row">
+            <div class="col-lg-8">{% include 'components/messages.html' %}</div>
+            <div class="col-lg-4">{% include 'components/discipline.html' %}</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">{% include 'components/contact.html' %}</div>
+            <div class="col-lg-8">{% include 'components/notes.html' %}</div>
+        </div>
+    </div> <br> <br>
+    
+{% endfor %}
 
 {% endblock %}
