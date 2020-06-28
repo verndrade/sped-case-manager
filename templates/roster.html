@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Your Students:</h4>
+
+{% for i in user.teacher.students.all %}
+{% include 'components/sidebar.html' %}<br>
+{% endfor %}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+    <label for="assignment">Add an Assignment</label>
+    <input class="form-control" id="assignment" name="assignment" required>
+    </div>
+    <div class="form-group">
+    <label for="duedate">Due Date (default 1 day)</label>
+    <input class="form-control" id="duedate" type="datetime-local" name="duedate">
+    </div>
+    <input class="btn btn-success" type="submit" value="Submit">
+</form>
+{% endblock %}
