@@ -6,6 +6,7 @@
 
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: green!important;
 }
 
 h1 {
@@ -43,6 +44,18 @@ a {
 
 .bold {
     font-weight: bold;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.grey {
+  color: var(--grey)
 }
 
 /*!
