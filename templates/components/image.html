@@ -1,0 +1,7 @@
+{% load static %}
+
+{% if forloop.counter0|divisibleby:1   %}
+<img class="student-img" src="https://randomuser.me/api/portraits/men/{{i.pk}}.jpg"/>
+{% else %}
+<img class="student-img" src="https://randomuser.me/api/portraits/women/{{i.pk}}.jpg"/>
+{% endif %}

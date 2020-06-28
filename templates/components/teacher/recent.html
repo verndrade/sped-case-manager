@@ -4,22 +4,13 @@
     </div>
     
     <div class="row students my-auto">
-        <div class="col-lg-3">
-            <img src="https://th.bing.com/th/id/OIP.k7CT4JxZg5SEemBHVXjUKgHaHa?pid=Api&rs=1" width="120px">
-            <p>Jane Doe</p>
-        </div>
-        <div class="col-lg-3">
-            <img src="https://th.bing.com/th/id/OIP.k7CT4JxZg5SEemBHVXjUKgHaHa?pid=Api&rs=1" width="120px">
-            <p>Jane Doe</p>
-        </div>
-        <div class="col-lg-3">
-            <img src="https://th.bing.com/th/id/OIP.k7CT4JxZg5SEemBHVXjUKgHaHa?pid=Api&rs=1" width="120px">
-            <p>Jane Doe</p>
-        </div>
-        <div class="col-lg-3">
-            <img src="https://th.bing.com/th/id/OIP.k7CT4JxZg5SEemBHVXjUKgHaHa?pid=Api&rs=1" width="120px">
-            <p>Jane Doe</p>
-        </div>
+        {% for i in recent %}
+            <div class="col-lg-3">
+                <a href="/casemanager/{{i.pk}}">{% include 'image.html' %}
+                      <h5 class="card-title">{{i.user.get_full_name}}</h5>
+                </a>
+            </div>
+        {% endfor %}
     </div>
 
     <a href="#" class="bottom right small">View all students</a>
