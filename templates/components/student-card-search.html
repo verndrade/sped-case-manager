@@ -14,7 +14,11 @@
                 </div>
             </div>
             <div class="col-lg-5" style="margin: auto;">
-               
+                <a href="/casemanager/{{i.pk}}">{% include 'image.html' %}
+                    <div class="card-body">
+                      <h5 class="card-title">{{i.user.get_full_name}}</h5>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

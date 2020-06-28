@@ -30,12 +30,6 @@
                     </div>
                     <div class="col-lg-10">
                         <p>{{i.case_manager.all.0.user.get_full_name}}</p>
-                        
-                        {% if i in user.teacher.cases.all %}
-                        <form action="/casemanager/{{i.pk}}">
-                            <button class="btn btn-primary"type="submit">Check Case</button>
-                        </form>
-                        {% endif %}
                     </div>
                 </div>
                 <div class="row">
