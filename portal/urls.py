@@ -12,4 +12,5 @@ urlpatterns = [
     path('casemanager/student/assignments', views.assignments, name="assignments"),
     path('casemanager/student/iep', views.iep, name="iep"),
     path('casemanager/student/discipline', views.discipline, name="discipline"),
+    path('roster/', views.roster, name="roster"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
