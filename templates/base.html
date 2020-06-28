@@ -17,16 +17,98 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+  <style>
+    :root {
+    --dark: #484644;
+    --grey: #DADADA;
+    --blue: #0078D4;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 33px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 23px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+a {
+    color: var(--blue);
+}
+
+.card {
+    border: 0px;
+    border-radius: 0;
+    border-top: 1px var(--dark) solid;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.small {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.grey {
+  color: var(--grey)
+}
+
+.table {
+  border-bottom: 1px solid var(--grey);
+}
+
+.container .table {
+  padding: 0;
+}
+
+.container {
+  margin: 10px;
+}
+
+.sidebar {
+  background: var(--grey);
+}
+
+</style>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="d-flex flex-column">
   {% include 'components/navbar.html' %}
-
-  <div class="container my-3 flex-fill">
-    <h2 class="text-center">Hello {{user.get_full_name}}!</h2><br>
-    {% block content %}
-    {% endblock %}
-  </div>
+  {% block content %}
+  {% endblock %}
 
   </body>
 </html>
