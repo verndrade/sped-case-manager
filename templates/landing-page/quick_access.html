@@ -1,4 +1,34 @@
 {% load static %}
+<style>
+    /* OneNote */
+#onenoteSection {
+position: absolute;
+width: 93px;
+height: 79px;
+left: 133px;
+background-color:purple; 
+/* background-image:url("https://www.utdallas.edu/oit/files/onenote_new.png"); */
+}
+
+/* OneDrive */
+#onedriveSection{
+position: absolute;
+width: 93px;
+height: 79px;
+left: 253px;
+background-color:teal;
+/* background-image:url("https://www.utdallas.edu/oit/files/onedrive_new.png"); */
+}
+
+/* Outlook */
+#outlookSection{
+position: absolute;
+width: 93px;
+height: 79px;
+background-color:blue; 
+/* background-image:url("https://cdn.jim-nielsen.com/ios/512/microsoft-outlook-2019-03-21.png"); */
+}
+</style>
 <div class="container">
     <!-- As a heading -->
     <div class="row">
@@ -6,15 +36,15 @@
             <span class="navbar-brand mb-0 h1">Quick Access tool</span>
         </nav>
     </div>
+    <br>
     <div class="row">
-        <div class="col">
-            Outlook
+        <div class="col-sm-3" id="outlookSection">
         </div>
-        <div class="col">
-            OneNote
+        <div class="col-sm-3" id="onenoteSection">
+            
         </div>
-        <div class="col">
-            OneDrive
+        <div class="col-sm-3" id="onedriveSection">
+         
         </div>
     </div>
 
