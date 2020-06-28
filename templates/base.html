@@ -57,6 +57,7 @@ a {
     border: 0px;
     border-radius: 0;
     border-top: 1px var(--dark) solid;
+    height: 100%;
 }
 
 .small {
@@ -73,7 +74,11 @@ a {
 }
 
 .right {
-  right: 0;
+  text-align: right;
+}
+
+.center {
+  text-align: center;
 }
 
 .grey {
@@ -84,6 +89,10 @@ a {
   margin: 10px;
 }
 
+.sidebar {
+  background: var(--grey);
+}
+
 </style>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,7 +100,7 @@ a {
 <body class="d-flex flex-column">
   {% include 'navbar.html' %}
 
-  <div class="container my-3 flex-fill">
+  <div class="container flex-fill m-0">
     {% block content %}
     {% endblock %}
   </div>
