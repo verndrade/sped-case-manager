@@ -8,7 +8,12 @@
     <div id="page-content-wrapper">
         <div class="content p-4 container-fluid text-center text-md-left h-100">
             <div class="row h-100">
-                <p>This is where you include stuff</p>
+                {% include 'case-manager/iep.html' %}
+                {% include 'case-manager/assignments.html' %}
+                {% include 'case-manager/messages.html' %}
+                {% include 'case-manager/discipline.html' %}
+                {% include 'case-manager/contact.html' %}
+                {% include 'case-manager/notes.html' %}
             </div>
         </div>
 
