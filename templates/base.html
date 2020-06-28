@@ -58,6 +58,7 @@ a {
     border-radius: 0;
     border-top: 1px var(--dark) solid;
     height: 100%;
+    padding-top: 10px;
 }
 
 .small {
@@ -85,8 +86,14 @@ a {
   color: var(--grey)
 }
 
+.table {
+  border-top: 1px solid var(--grey);
+  padding-top: 5px;
+}
+
 .container {
   margin: 10px;
+  padding-x: 0px;
 }
 
 .sidebar {
@@ -97,10 +104,10 @@ a {
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="d-flex flex-column">
+<body>
   {% include 'navbar.html' %}
 
-  <div class="container flex-fill m-0">
+  <div>
     {% block content %}
     {% endblock %}
   </div>
