@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 
-from .models import Assignment
+from .models import Assignment, StudentProfile
 from datetime import timedelta, datetime
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User 
 # Create your views here.
 def index(request):
     if not request.user.is_authenticated:
@@ -19,8 +19,11 @@ def index(request):
     return render(request, template, context)
   
 # GET /casemanager
-def case_manager_landing_page(request):
-    return render(request, 'casemanager.html')
+def case_manager(request, pk):
+    for i in request.user.teacher.students.all():
+        if i.pk == pk:
+            return render(request, 'casemanager.html', {'i':i})
+    return redirect('/roster')
 
 # GET /casemanager
 def search(request):

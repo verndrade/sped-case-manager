@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'base-dep.html' %}
 
 {% block content %}
-<h4>Your Students:</h4>
 
+<h2 class="text-center">Your {{user.teacher.course}} Class's Roster!</h2><br>
 {% for i in user.teacher.students.all %}
-{% include 'components/sidebar.html' %}<br>
+{% include 'components-deprecat/sidebar.html' %}<br>
 {% endfor %}
 
 <form method="post">

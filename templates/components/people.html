@@ -1,76 +1,43 @@
 {% load static %}
-<div class="card hideDiv" id="{{ i.user }}">
-    <div class="container">
+
+<div class="card sidebar">
+    <div class="container mx-0">
         <div class="row">
-            <div class="col-lg-4">
-                <h3>People</h3>
-                <div class="row grey">
-                    <div class="col-lg-12 bold">
-                        <p>Teachers</p>
-                    </div>
-                </div>
-                {% for x in i.teachers.all %}
-                <div class="row">
-                    <div class="col-lg-1">
-                        <p></p>
-                    </div>
-                    <div class="col-lg-10">
-                        <p>{{x.user}} -- {{x.course}}</p>
-                    </div>
-                </div>
-                {% endfor %}
-                <div class="row grey">
-                    <div class="col-lg-12 bold">
-                        <p>Case Manager</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-1">
-                        <p></p>
-                    </div>
-                    <div class="col-lg-10">
-                        <p>{{i.case_manager.all.0.user.get_full_name}}</p>
-                    </div>
-                </div>
-                <div class="row grey">
-                    <div class="col-lg-12 bold">
-                        <p>Administrators</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-1">
-                        <p></p>
-                    </div>
-                    <div class="col-lg-10">
-                        <p>William Fences</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-1">
-                        <p></p>
-                    </div>
-                    <div class="col-lg-10">
-                        <p>Satya Nutella</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                {% include 'components/assignments.html' %}
-                {% include 'components/discipline.html' %}
-            </div>
+            <div class="col-lg-9"><h3>People</h3></div>
+            <div class="col-lg-3 small"><a href="#">Edit</a></div>
         </div>
     </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 bold"><p>Teachers</p></div>
+        </div>
+        {% for teacher in i.teachers.all %}
+        <div class="row">
+            <div class="col-lg-6 ml-2"><p>{{teacher.user}}</p></div>
+            <div class="col-lg-5"><p>{{teacher.course}}</p></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 bold"><p>Case Manager</p></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 ml-1"><p>{{i.case_manager.all.0.user.get_full_name}}</p></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 bold"><p>Administrators</p></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 ml-1"><p>Satya Nadella</p></div>
+        </div>
+    </div>
+
+
+    <a href="/roster" class="bottom center small">View Class Roster</a>
 </div>
-
-<script> 
-    function myFunction(name) {
-      name = document.getElementById(name)
-      $(name).toggleClass('hideDiv')
-    }
-</script> 
-
-<style>
-    .hideDiv {
-	    display: none;
-    }
-</style>

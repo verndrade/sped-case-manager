@@ -1,9 +1,22 @@
 {% load static %}
 
-<h3 class="bold">Assignments</h3>
+<div class="card">
+    <h3 class="bold">Assignments</h3>
 
-<ul>
-{% for i in i.assignments.all %}
-    <li> {{i.course}} -- {{i.assignment}} -- {{i.due_date}}</li>
-{% endfor %}
-</ul>
+    <div class="container">
+        <div class="row table bold">
+            <div class="col-lg-5"><p>Due Date</p></div>
+            <div class="col-lg-4"><p>Name</p></div>
+            <div class="col-lg-3"><p>Class</p></div>
+        </div>
+        {% for i in i.assignments.all %}
+        <div class="row table">
+            <div class="col-lg-5"><p>{{i.due_date}}</p></div>
+            <div class="col-lg-4"><p>{{i.assignment}}</p></div>
+            <div class="col-lg-3"><p>{{i.course}}</p></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="#" class="bottom right small">View all assignments</a>
+</div>

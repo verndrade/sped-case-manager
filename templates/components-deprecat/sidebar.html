@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="accordion" id="accordionExample"  style="background-color: lightblue;" >
+    <button class="btn btn-block text-left" style="border: lightblue;"data-toggle="collapse" data-target="#collapse{{i.pk}}" aria-expanded="true" aria-controls="collapseOne">
+      {% include 'components-deprecat/student-card.html' %}
+    </button>
+
+    <div id="collapse{{i.pk}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      {% include 'components-deprecat/people.html' %}
+    </div>
+</div>

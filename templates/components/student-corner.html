@@ -1,0 +1,17 @@
+{% load static %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="rounded-circle" style="width: 80%; height: auto; padding-top: 10px;" src="https://randomuser.me/api/portraits/men/{{i.pk}}.jpg"/>
+            </div>
+            <div class="col-lg-6 my-auto">
+                {% if i.user.get_full_name %}
+                    <div class="row"><h1>{{i.user.get_full_name}}</h1></div>
+                {% else %}
+                    <div class="row"><h1>Jane Doe</h1></div>
+                {% endif %}
+                <div class="row"><p>9th Grade<br></p></div>
+            </div>
+        </div>
+    </div>

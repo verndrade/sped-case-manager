@@ -1,0 +1,21 @@
+{% load static %}<br>
+<div class="container" style="margin: auto;">
+    <div class="row">
+        <div class="col-lg-2">
+            {% include 'image.html' %}
+        </div>
+        <div class="col-lg-5" style="padding: 1%;">
+            <div class="row">
+                <h1>{{i.get_full_name}}</h1>
+            </div>
+            <div class="row">
+                <p>9th Grade &nbsp; &nbsp; Macrohard Highschool</p>
+            </div>
+        </div>
+        <div class="col-lg-5" style="margin: auto;">
+            <form action="/casemanager/{{i.pk}}">
+                <button class="btn btn-primary"type="submit">Check Case</button>
+            </form>
+        </div>
+    </div>
+</div>

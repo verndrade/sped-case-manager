@@ -1,0 +1,13 @@
+{% load static %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {% include 'image.html' %}
+            </div>
+            <div class="col-lg-6 my-auto">
+                <div class="row"><h1>{{i.user.get_full_name}}</h1></div>
+                <div class="row"><p>9th Grade<br><a href="#">John Smith</a></p></div>
+            </div>
+        </div>
+    </div>
