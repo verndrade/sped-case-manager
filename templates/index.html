@@ -7,8 +7,10 @@
         {% include 'teacher.html' %}
     {% elif user.student %}
         {% include 'student.html' %}
-    {% else %}
-        Login in on /admin
+    {% elif user.student %}
+        {% include 'casemanager.html' %}       
     {% endif %}
+{% else %}
+    Login in on /admin
 {% endif %}
 {% endblock %}
