@@ -2,22 +2,25 @@
 {% load static %}
 
 {% block content %}
-
-    {% include 'case-manager/sidebar.html' %}
-
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">{% include 'case-manager/iep.html' %}</div>
-            <div class="col-lg-8">{% include 'case-manager/assignments.html' %}</div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8">{% include 'case-manager/messages.html' %}</div>
-            <div class="col-lg-4">{% include 'case-manager/discipline.html' %}</div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">{% include 'case-manager/contact.html' %}</div>
-            <div class="col-lg-8">{% include 'case-manager/notes.html' %}</div>
+            <div class="col-lg-4">
+                {% include 'case-manager/sidebar.html' %}
+            </div>
+            <div class="col-lg-8">
+                <div class="row mb-2">
+                    <div class="col-lg-4">{% include 'case-manager/iep.html' %}</div>
+                    <div class="col-lg-8">{% include 'case-manager/assignments.html' %}</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-lg-8">{% include 'case-manager/messages.html' %}</div>
+                    <div class="col-lg-4">{% include 'case-manager/discipline.html' %}</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-lg-4">{% include 'case-manager/contact.html' %}</div>
+                    <div class="col-lg-8">{% include 'case-manager/notes.html' %}</div>
+                </div>
+            </div>
         </div>
     </div>
-
 {% endblock %}
