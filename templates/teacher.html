@@ -2,12 +2,11 @@
 {% load static %}
 
 {% block content %}
-{% for i in user.teacher.cases.all %}
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
                 <div class="row">{% include 'components/teacher/recent.html' %}</div>
-                <div class="row">{% include 'components/teacher/alerts.html' %}</div>
+                <div class="row">{% include 'components/teacher/alerts/alerts.html' %}</div>
             </div>
             <div class="col-lg-2">
             </div>
@@ -18,5 +17,4 @@
             </div>
         </div>
     </div>
-{% endfor %}
 {% endblock %}
