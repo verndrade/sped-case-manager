@@ -1,0 +1,546 @@
+/* LEFT SIDE*/ 
+/* Left Side */
+.left_side {
+    position: absolute;
+    width: 691px;
+    height: 822px;
+    left: 81px;
+    top: 112px;
+    }
+    
+    /* Recently Viewed Students */
+    .recently_viewed_students{
+    position: absolute;
+    width: 691px;
+    height: 286px;
+    left: 81px;
+    top: 112px;
+    }
+
+    /* Recently Viewed Student Box */
+    .recently_viewed_student_box {
+        position: absolute;
+        width: 691px;
+        height: 34px;
+        left: 81px;
+        top: 112px;
+        
+        background: #C4C4C4;
+    }
+
+    /* Recently Viewed Students Text*/
+    .recently_viewed_student_text { 
+        position: absolute;
+        width: 289px;
+        height: 31px;
+        left: 106px;
+        top: 119px;
+    }
+
+    /* Profile1 */
+    .profile1{ 
+        position: absolute;
+        width: 127px;
+        height: 135px;
+        left: 106px;
+        top: 171px;
+        
+        background: #917ED8;
+    }
+
+    /* Profile2 */
+    .profile2 { 
+        position: absolute;
+        width: 127px;
+        height: 135px;
+        left: 268px;
+        top: 171px;
+        
+        background: #917ED8;
+    }
+
+    /* Profile3 */
+    .profile3 { 
+        position: absolute;
+        width: 127px;
+        height: 135px;
+        left: 434px;
+        top: 171px;
+        
+        background: #917ED8;
+    }
+
+    /* Profile4 */
+    .profile4 { 
+        position: absolute;
+        width: 127px;
+        height: 135px;
+        left: 600px;
+        top: 172px;
+        
+        background: #917ED8;
+    }
+
+    /* Jane Doe1 Text */
+    .person1_text { 
+        position: absolute;
+        width: 89px;
+        height: 42px;
+        left: 120px;
+        top: 316px;
+    }
+
+    /* Jane Doe2 Text */
+    .person2_text { 
+        position: absolute;
+        width: 89px;
+        height: 42px;
+        left: 286px;
+        top: 316px;  
+    }
+
+    /* Jane Doe3 Text */
+    .person3_text { 
+        position: absolute;
+        width: 89px;
+        height: 42px;
+        left: 453px;
+        top: 316px;  
+    }
+    
+    /* Jane Doe4 Text */
+    .person4_text{
+        position: absolute;
+        width: 89px;
+        height: 42px;
+        left: 619px;
+        top: 316px;
+    }
+
+    /* See All >>Text */
+    .see_all_text { 
+        position: absolute;
+        width: 70px;
+        height: 19px;
+        left: 682px;
+        top: 379px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+
+        text-decoration-line: underline;
+
+        color: #000000;
+    }
+
+    /* Alerts */
+    .alerts {
+    position: absolute;
+    width: 691px;
+    height: 32px;
+    left: 81px;
+    top: 432px;
+    }
+
+    /* Alerts Box */
+    .alert_box { 
+        position: absolute;
+        width: 691px;
+        height: 32px;
+        left: 81px;
+        top: 432px;
+        
+        background: #C4C4C4;
+    }
+
+    /* Alerts (if applicable, ex. school closing early, holiday) */
+    .alert_box_text { 
+        position: absolute;
+        width: 584px;
+        height: 23px;
+        left: 106px;
+        top: 437px;
+    }
+
+    /* All Widgets Section */
+    .widgets {
+        position: absolute;
+        width: 677px;
+        height: 438px;
+        left: 87px;
+        top: 496px;
+        
+    }
+    /* + More Widget Place holder */
+    .more_widgets {
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 453px;
+        top: 729px;
+    }
+
+    /* + More Widget Box */
+    .more_widget_box {
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 453px;
+        top: 729px;
+        
+        background: #C4C4C4;
+        
+    }
+
+    /* + Text */
+    .more_widget_word { 
+        position: absolute;
+        width: 41px;
+        height: 84px;
+        left: 588px;
+        top: 788px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 72px;
+        line-height: 84px;
+        
+        color: #000000;
+    }
+
+    /* PP Widget Placeholder */
+    .policy_widget { 
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 88px;
+        top: 731px;
+    }
+    /* Policy & Procedure Box */
+    .policy_procedure_box {
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 88px;
+        top: 731px;
+        
+        background: #C4C4C4;     
+    }
+
+    /* Policies & Procedures Library */
+    .policy_procedure_text {
+        position: absolute;
+        width: 255px;
+        height: 14px;
+        left: 120px;
+        top: 754px;     
+    }
+
+    /* Employee Directory Widget Placeholder */
+    .employee_directory_widget {
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 453px;
+        top: 496px;
+    }
+
+    /* Employee Directory Box */
+    .employee_directory_box {
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 453px;
+        top: 496px;
+        
+        background: #C4C4C4;
+        
+    }
+
+    /* Employee Directory */
+    .employee_directory_text {
+        position: absolute;
+        width: 234px;
+        height: 14px;
+        left: 493px;
+        top: 519px;
+    
+    }   
+
+    /* Tasks Pending Widget */
+    .task_pending_widget_placeholder { 
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 87px;
+        top: 496px;
+    }
+
+    /* Task Pending Box */
+    .task_pending_box { 
+        position: absolute;
+        width: 311px;
+        height: 203px;
+        left: 87px;
+        top: 496px;
+        
+        background: #C4C4C4;
+    }
+
+    /* Tasks Pending Text */
+    .task_pending_text {
+        position: absolute;
+        width: 138.46px;
+        height: 14.46px;
+        left: 192px;
+        top: 519px;
+    }
+
+
+
+/* Right Side */
+.right_side {
+    position: absolute;
+    width: 311px;
+    height: 822px;
+    left: 1018px;
+    top: 112px;
+}
+
+/* Quick Access Tools Section*/
+.quick_access_section {
+position: absolute;
+width: 311px;
+height: 125px;
+left: 1018px;
+top: 112px;
+}
+/* Header background_of_access */
+.header_background_access {
+position: absolute;
+width: 311px;
+height: 34px;
+left: 1018px;
+top: 112px;
+
+background: #C4C4C4;
+}
+
+/* Quick Access Tools Text */
+.quick_access_tool_text{
+position: absolute;
+width: 201px;
+height: 23px;
+left: 1035px;
+top: 116px;
+}
+
+/* OneNote */
+.oneNoteSection {
+position: absolute;
+width: 93px;
+height: 79px;
+left: 1018px;
+top: 158px;
+
+background: #C4C4C4;
+}
+
+/* OneDrive */
+.oneDriveSection{
+position: absolute;
+width: 93px;
+height: 79px;
+left: 1127px;
+top: 158px;
+
+background: #C4C4C4;
+}
+
+/* Outlook */
+.outlookSection{
+position: absolute;
+width: 93px;
+height: 79px;
+left: 1236px;
+top: 158px;
+
+background: #C4C4C4;
+}
+
+
+/* MY FAVORITES SECTION */ 
+/* My Favorites Section Placeholder */
+.my_favorites_section_container{
+position: absolute;
+width: 311px;
+height: 277px;
+left: 1018px;
+top: 306px;
+}
+
+/* My Favorites Rectangle */
+.my_favorites_rectangle {
+position: absolute;
+width: 311px;
+height: 34px;
+left: 1018px;
+top: 306px;
+
+background: #C4C4C4;
+}
+
+/* My Favorites Text */
+.my_favorites {
+position: absolute;
+width: 201px;
+height: 23px;
+left: 1035px;
+top: 312px;
+}
+
+
+/* My Favorites Result Box Area */
+.my_favorites_result {
+position: absolute;
+width: 309px;
+height: 175px;
+left: 1020px;
+top: 351px;
+
+background: #C4C4C4;
+}
+
+/* Button */
+.button {
+position: absolute;
+width: 99px;
+height: 36px;
+left: 1230px;
+top: 547px;
+
+background: #C4C4C4;
+}
+
+/* See More Button */
+.see_more_button{
+position: absolute;
+width: 85px;
+height: 23px;
+left: 1237px;
+top: 554px;
+}
+
+/* See More Text */
+.see_more_text { 
+    position: absolute;
+    width: 85px;
+    height: 23px;
+    left: 1237px;
+    top: 554px;
+}
+
+
+
+
+
+
+
+
+/* UPCOMING EVENTS */
+/* Upcoming Events */
+.upcomingEvents {
+position: absolute;
+width: 311px;
+height: 316px;
+left: 1018px;
+top: 618px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////everything navbar related here 
+/* Navbar */
+.navbar {
+position: absolute;
+width: 1440px;
+height: 48px;
+left: 0px;
+top: 0px;
+}
+
+/* Search Bar */
+.searchbar {
+position: absolute;
+left: 61.88%;
+right: 23.61%;
+top: 18.75%;
+bottom: 18.75%;
+  
+}
+
+/* User Icon */
+.user_icon {
+position: absolute;
+left: 96.46%;
+right: 1.04%;
+top: 12.5%;
+bottom: 12.5%;
+
+background: #C4C4C4;
+}
+
+/* Help Buttons */
+.help_button {
+position: absolute;
+left: 92.85%;
+right: 5.07%;
+top: 18.75%;
+bottom: 18.75%;
+
+background: #C4C4C4;
+}
+
+/* Settings Button */
+.settings_button {
+position: absolute;
+left: 89.86%;
+right: 8.06%;
+top: 18.75%;
+bottom: 18.75%;
+
+background: #C4C4C4;
+}
+
+/* Notifications Button */
+.notification_button {
+position: absolute;
+left: 86.88%;
+right: 11.04%;
+top: 18.75%;
+bottom: 18.75%;
+
+background: #C4C4C4;
+}
