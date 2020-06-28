@@ -1,37 +1,16 @@
 {% load static %}
-<div class="card">
-    <div class="container" style="background-color: lightblue;">
-        <div class="row">
-            <div class="col-lg-2">
-                <img class="rounded-circle" style="width: 80%; height: auto; padding-top: 10px;" src="https://www.thispersondoesnotexist.com/image"/>
+    <div class="row">
+        <div class="col-lg-2">
+            {% include 'image.html' %}
+        </div>
+        <div class="col-lg-5" style="padding: 1%;">
+            <div class="row">
+                <h1>{{i.user.get_full_name}}</h1>
             </div>
-            <div class="col-lg-5" style="padding: 1%;">
-                <div class="row">
-                    <h1>{{i.user.get_full_name}}</h1>
-                </div>
-                <div class="row">
-                    <p>9th Grade &nbsp; &nbsp; Macrohard Highschool</p>
-                </div>
-            </div>
-            <div class="col-lg-5" style="margin: auto;">
-                <table>
-                    <tr>
-                        <th>
-                            <button class="btn btn-primary" onclick="myFunction('{{ i.user }}')">Toggle Info</button>
-                        </th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        {% if i in user.teacher.cases.all %}
-                        <th>
-                            <form action="https://www.w3docs.com/">
-                                <button class="btn btn-primary"type="submit">Check Case</button>
-                            </form>
-                        </th>
-                        {% endif %}
-                    </tr>
-                </table>
+            <div class="row">
+                <p>9th Grade &nbsp; &nbsp; Macrohard Highschool</p>
             </div>
         </div>
+        <div class="col-lg-2">
+        </div>
     </div>
-</div>

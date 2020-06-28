@@ -5,15 +5,15 @@
                 <span class="navbar-brand mb-0 h1">Recently Viewed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/roster">Full Roster</a></span>
             </nav>
         </div>
+        
         <div class="row">
             {% for i in recent %}
-            <div class="col-sm-3">
-                <div class="card" style="width: 8rem;">
-                    <img src="https://www.thispersondoesnotexist.com/image" class="card-img-top" alt="...">
+            <div class="col-sm-3 text-center">
+                <a href="/casemanager/{{i.pk}}">{% include 'image.html' %}
                     <div class="card-body">
                       <h5 class="card-title">{{i.user.get_full_name}}</h5>
                     </div>
-                  </div>
+                </a>
             </div>
             {% endfor %}
         </div>
