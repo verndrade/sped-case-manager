@@ -7,21 +7,17 @@ from django.contrib.auth.models import User
 def index(request):
     if not request.user.is_authenticated:
         return redirect('/admin')
-        
-    if request.method == 'POST':
-        assign = Assignment()
-        assign.teacher = request.user
-        assign.assignment = request.POST['assignment']
-        assign.course = request.user.teacher.course
-        assign.assign_date = datetime.now()
-        if request.POST['duedate']:
-            assign.due_date = request.POST['duedate']
-        else:
-            assign.due_date = assign.assign_date + timedelta(1)
-        assign.save()
-        for i in request.user.teacher.students.all():
-            i.assignments.add(assign)
-    return render(request, 'index.html')
+
+    template = 'unknown.html'
+    context = {}
+    if request.user.teacher:
+        template = 'teacher.html'
+        context['recent'] = request.user.teacher.students.all()[0:4]
+        print(context)
+    elif request.user.student:
+        template = 'student.html'
+    
+    return render(request, template, context)
   
 # GET /casemanager
 def case_manager_landing_page(request):
@@ -54,6 +50,19 @@ def iep(request):
 def discipline(request):
     return render(request, 'discipline.html')
 
-# GET /landingpage 
-def landing_page(request): 
-    return render(request, 'landingpage.html')
+# GET /roster 
+def roster(request): 
+    if request.method == 'POST':
+        assign = Assignment()
+        assign.teacher = request.user
+        assign.assignment = request.POST['assignment']
+        assign.course = request.user.teacher.course
+        assign.assign_date = datetime.now()
+        if request.POST['duedate']:
+            assign.due_date = request.POST['duedate']
+        else:
+            assign.due_date = assign.assign_date + timedelta(1)
+        assign.save()
+        for i in request.user.teacher.students.all():
+            i.assignments.add(assign)
+    return render(request, 'roster.html')

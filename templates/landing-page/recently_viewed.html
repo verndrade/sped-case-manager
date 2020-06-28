@@ -2,46 +2,19 @@
     <div class="container" >
         <div class="row">
             <nav class="navbar">
-                <span class="navbar-brand mb-0 h1">Recently Viewed</span>
+                <span class="navbar-brand mb-0 h1">Recently Viewed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/roster">Full Roster</a></span>
             </nav>
         </div>
         <div class="row">
-            <div class="col-sm-3">
-                <div class="card" style="width: 8rem;">
- 
-
-                    <img src="https://www.thispersondoesnotexist.com/image" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Jane Doe</h5>
-                    </div>
-                  </div>
-            </div>
-              
+            {% for i in recent %}
             <div class="col-sm-3">
                 <div class="card" style="width: 8rem;">
                     <img src="https://www.thispersondoesnotexist.com/image" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Jill Doe</h5>
+                      <h5 class="card-title">{{i.user.get_full_name}}</h5>
                     </div>
                   </div>
             </div>
-
-            <div class="col-sm-3">
-                <div class="card" style="width: 8rem;">
-                    <img src="https://www.thispersondoesnotexist.com/image" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Jake Doe</h5>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card" style="width: 8rem;">
-                    <img src="https://www.thispersondoesnotexist.com/image" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Joe Doe</h5>
-                    </div>
-                  </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
