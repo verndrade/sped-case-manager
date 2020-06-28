@@ -1,19 +1,23 @@
-{% load static %}
+{% load static %}<br>
 <div class="container">
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Alerts
-      </button>
-      </h2>
-    </div>
+  <div class="accordion" id="accordionExample">
+    <div>
+      <div class="card-header alert-danger" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Alerts
+        </button>
+        </h2>
+      </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body"> School closing
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <ul>
+        <li> Snow Day </li>
+        <li> Power Outage </li>
+        <li> Tornado Drill </li>
+        <li> Fire Drill </li>
+      </ul>
       </div>
     </div>
   </div>
-</div>
 </div>

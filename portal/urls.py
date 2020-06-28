@@ -7,8 +7,9 @@ app_name = 'portal'
 urlpatterns = [
     path('', views.index, name="index"),
     path('search/', views.search, name="search"),
-    path('casemanager/', views.case_manager_landing_page, name="casemanager"),
-    path('casemanager/student', views.student, name="student"),
+
+    path('student', views.student, name="student"),
+    path('casemanager/<int:pk>', views.case_manager, name="case_manager"),
     path('casemanager/student/assignments', views.assignments, name="assignments"),
     path('casemanager/student/iep', views.iep, name="iep"),
     path('casemanager/student/discipline', views.discipline, name="discipline"),
