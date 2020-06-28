@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if found %}
+    {% for i in found %}
+        {% include 'components/student-card-search.html' %}<br>
+    {% endfor %}
+{% else %}
+    Sorry your search was not found!
+{% endif %}
+{% endblock %}

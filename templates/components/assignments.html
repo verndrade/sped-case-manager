@@ -1,0 +1,9 @@
+{% load static %}
+
+<h3 class="bold">Assignments</h3>
+
+<ul>
+{% for i in i.assignments.all %}
+    <li> {{i.course}} -- {{i.assignment}} -- {{i.due_date}}</li>
+{% endfor %}
+</ul>

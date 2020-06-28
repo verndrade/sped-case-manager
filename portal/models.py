@@ -14,10 +14,11 @@ class Assignment(models.Model):
 
 class StudentProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='student')
-    assignments = models.ManyToManyField(Assignment)
+    assignments = models.ManyToManyField(Assignment, related_name="students")
 
 
 class TeacherProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='teacher')
-    students = models.ManyToManyField(StudentProfile)
+    students = models.ManyToManyField(StudentProfile, related_name="teachers")
+    cases = models.ManyToManyField(StudentProfile, related_name="case_manager")
     course = models.CharField(max_length=200, default="Algebra")
