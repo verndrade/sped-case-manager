@@ -4,37 +4,9 @@
 
 {% if not user.is_anonymous %}
     {% if user.teacher %}
-        <h4>Your Students:</h4>
-        <ul>
-            {% for i in user.teacher.students.all %}
-            <li>{{i.user}}</li>
-            Assignments:
-            <ul>
-                {% for i in i.assignments.all %}
-                    <li>{{i.due_date}} - {{i.course}} -- {{i.teacher}}
-                {% endfor %}
-            </ul><br>
-            <form method="post">
-              {% csrf_token %}
-              <input name="id" value ="{{i.user}}" type="hidden">
-              <div class="form-group">
-                <label for="assignment">Add an Assignment</label>
-                <input class="form-control" id="assignment" name="assignment" required>
-              </div>
-              <div class="form-group">
-                <label for="duedate">Due Date (default 1 day)</label>
-                <input class="form-control" id="duedate" type="datetime-local" name="duedate">
-              </div>
-              <input class="btn btn-success" type="submit" value="Submit">
-            </form>
-            {% endfor %}
-        </ul>
+        {% include 'teacher.html' %}
     {% elif user.student %}
-        Your Assignments:
-        {% for i in user.student.assignments.all %}
-            <li>{{i.due_date}}</li>
-            <li>{{i.course}}</li>
-        {% endfor %}
+        {% include 'student.html' %}
     {% else %}
         Login in on /admin
     {% endif %}
