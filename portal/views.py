@@ -23,3 +23,7 @@ def iep(request):
 # GET /casemanager/student/discipline
 def discipline(request):
     return render(request, 'discipline.html')
+
+# GET /landingpage 
+def landing_page(request): 
+    return render(request, 'landingpage.html')

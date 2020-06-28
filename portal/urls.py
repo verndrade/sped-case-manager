@@ -10,4 +10,5 @@ urlpatterns = [
     path('casemanager/student/assignments', views.assignments, name="assignments"),
     path('casemanager/student/iep', views.iep, name="iep"),
     path('casemanager/student/discipline', views.discipline, name="discipline"),
+    path('landingpage/', views.landing_page, name="landingpage"),
 ]

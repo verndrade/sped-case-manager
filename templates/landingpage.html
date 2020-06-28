@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class=left_side>
+    {% include 'landing-page/recently_viewed.html' %}
+</div>
+
+<div class=right_side>
+    {% include 'landing-page/quick_access.html' %}
+</div>
+{% endblock %}
